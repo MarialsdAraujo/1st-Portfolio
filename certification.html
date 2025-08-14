@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+   <!-- Sets the viewport to make the website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experience</title>
+     <!-- Import Montserrat font (weights 400 & 700) from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styling */
+        body {
+            background-color: #000; /* Dark background color */
+            color: #fff; /* Light text color */
+            font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+            padding: 20px; /* Add padding for better spacing */
+        }
+        /* Heading Styling */
+        h1 {
+            text-align: center; /* Center-align the heading */
+            margin-top: 30px; /* Adjust top margin for better spacing */
+            color: #00ffe0; /* Light color for the heading */
+        }
+        /* Navbar */
+        .navbar {
+            position: absolute; /* Keeps the navbar always on top */
+            top: 20px; /* Adjust top position */
+            right: 40px; /* Adjust right position */
+            display: flex; /* Flex container for navbar items */
+            gap: 20px; /* Adjust gap between navbar items */
+            background-color: transparent; /* Transparent background for navbar */
+            font-weight: bold; /* Bold font weight for navbar links */
+        }
+        /* Navbar Links */
+        .navbar a {
+            color: #fff; /* White color for links */
+            text-decoration: none; /* Remove underline from links */
+            font-weight: bold; /* Bold font weight for links */
+            transition: color 0.3s; /* Smooth transition for hover effect */
+        }
+        /* Navbar Link Hover Effect */
+        .navbar a:hover {
+            color: #00ffe0; /* Change color on hover */
+        }
+        /* Hero Section */
+        .hero {
+            display: flex; /* Flex container for hero section */
+            align-items: center; /* Center-align items vertically */
+            justify-content: center; /* Center-align items horizontally */
+            flex-wrap: wrap; /* Wrap items to the next line if necessary */
+            padding: 80px 20px; /* Adjust padding for better spacing */
+            gap: 60px; /* Adjust gap between items */
+            text-align: left; /* Align text to the left */
+        }
+        /* Hero Text Styling */
+        .hero-text {
+            max-width: 500px; /* Limit the width of the text */
+        }
+        /* Hero Heading Styling */
+        .hero h1 {
+            font-size: 48px; /* Increase font size for better readability */
+            margin-bottom: 20px; /* Adjust margin for better spacing */
+            color: #fff; /* White color for the heading */
+        }
+        /* Hero Text Span Styling */
+        .hero h1 span {
+            color: #00ffe0; /* Light color for the span */
+        }
+        /* Hero Paragraph Styling */
+        .hero p {
+            color: #ccc; /* Light grey color for text */
+            font-size: 14px; /* Adjust font size for better readability */
+            margin-bottom: 30px; /* Adjust margin for better spacing */
+            line-height: 1.6; /* Adjust line height for better spacing */
+            text-align: justify; /* Justify alignment */
+        }
+        /* Timeline Styling */
+        .timeline {
+            position: relative; /* Position relative for absolute positioning of items */
+            max-width: 800px; /* Limit the width of the timeline */
+            margin: 50px auto; /* Center the timeline */
+        }
+        /* Timeline Line */
+        .timeline::after {
+            content: ''; /* Empty content for the line */
+            position: absolute; /* Absolute positioning for the line */
+            width: 4px; /* Width of the line */
+            background-color: #00ffe0; /* Light color for the line */
+            top: 0; /* Top position */
+            bottom: 0; /* Bottom position */
+            left: 50%; /* Center the line */
+            margin-left: -2px; /* Adjust margin for better centering */
+        }
+        /* Timeline Items */
+        .timeline-item {
+            padding: 20px; /* Adjust padding for better spacing */
+            position: relative; /* Position relative for absolute positioning of dots */
+            background-color: #1a1a1a; /* Darker background for items */
+            border-radius: 8px; /* Rounded corners */
+            width: 45%; /* Adjust width for better spacing */
+            margin: 20px 0; /* Adjust margin for better spacing */
+            color: #fff; /* White color for text */
+        }
+        /* Dot for left side items */
+        .timeline-item.left::after {
+            content: ''; /* Empty content for the dot */
+            position: absolute; /* Absolute positioning for the dot */
+            width: 20px; /* Width of the dot */
+            height: 20px; /* Height of the dot */
+            right: -10px; /* Right position */
+            background-color: #00ffe0; /* Light color for the dot */
+            border: 3px solid #1a1a1a; /* Border color for the dot */
+            top: 30px; /* Top position */
+            border-radius: 50%; /* Creates the circle effect */
+            z-index: 1; /* Ensures the dot is above the line */
+        }
+        /* Dot for right side items */
+        .timeline-item.right::after {
+            content: ''; /* Empty content for the dot */
+            position: absolute; /* Absolute positioning for the dot */
+            width: 20px; /* Width of the dot */
+            height: 20px; /* Height of the dot */
+            left: -10px; /* Left position */
+            background-color: #00ffe0; /* Light color for the dot */
+            border: 3px solid #1a1a1a; /* Border color for the dot */
+            top: 30px; /* Top position */
+            border-radius: 50%; /* Creates the circle effect */
+            z-index: 1; /* Ensures the dot is above the line */
+        }
+        /* Left and Right Positioning */
+        .left {
+            left: 0; /* Left position */
+        }
+        /* Right Positioning */
+        .right {
+            left: 50%; /* Right position */
+        }
+        /* Timeline Item Heading */
+        .timeline-item h3 {
+            color: #00ffe0; /* Light color for the heading */
+            margin-top: 0; /* Remove default margin */
+        }
+        /* Timeline Item Paragraph */
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 50%; /* Center the line for smaller screens */
+            }
+            /* Adjust timeline items for smaller screens */
+            .timeline-item {
+                width: 100%; /* Full width for smaller screens */
+                left: 0 !important; /* Left position for smaller screens */
+                margin-left: 0; /* Remove default margin */
+                text-align: center; /* Center-align text for smaller screens */
+            }
+            /* Adjust dots for smaller screens */
+            .timeline-item.left::after,
+            .timeline-item.right::after {
+                left: 50%; /* Center the dot for smaller screens */
+                margin-left: -10px; /* Adjust margin for better centering */
+                right: auto; /* Remove right position */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="edu.html">Education</a>
+        <a href="exp.html">Experience</a>
+        <a href="skills.html">Skills</a>
+        <a href="certification.html">Certification</a>
+        <a href="volunteer.html">Volunteer</a>
+    </div>
+    <h1>Licenses & Certifications Timeline</h1>
+    <div class="timeline">
+        <div class="timeline-item left">
+            <h3>AWS Educate Machine Learning</h3>
+            <p> AWS Educate | Issued May 2025 </p>
+        </div>
+        <div class="timeline-item right">
+            <h3>AWS Educate DeepRacer Primer</h3>
+            <p> AWS Educate | Issued March 2025 </p>
+            <a href="documents/certificate_aws_deepracer.pdf" target="_blank" style="color: #00ffe0; font-weight: bold; display: inline-block; margin-top: 10px;">
+                📄 View Certificate
+            </a>
+        </div>
+        <div class="timeline-item left">
+            <h3>AWS Educate Introduction to Cloud 101</h3>
+            <p> AWS Educate | Issued March 2025 </p>
+            <a href="documents/certificate_aws_cloud101.pdf" target="_blank" style="color: #00ffe0; font-weight: bold; display: inline-block; margin-top: 10px;">
+                📄 View Certificate
+            </a>
+        </div>
+        <div class="timeline-item right">
+            <h3>Python for Finance: Investment Fundamentals & Data Analytics</h3>
+            <p> Udemy | Issued October 2023 </p>
+            <a href="documents/certificate_python_finance.pdf" target="_blank" style="color: #00ffe0; font-weight: bold; display: inline-block; margin-top: 10px;">
+                📄 View Certificate
+            </a>
+        </div>
+        <div class="timeline-item left">
+            <h3>Microsoft Power BI Desktop for Business</h3>
+            <p> Udemy | Issued September 2023 </p>
+            <a href="documents/certificate_power_BI.pdf" target="_blank" style="color: #00ffe0; font-weight: bold; display: inline-block; margin-top: 10px;">
+                📄 View Certificate
+            </a>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

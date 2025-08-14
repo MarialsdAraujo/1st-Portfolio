@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+   <!-- Sets the viewport to make the website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experience</title>
+     <!-- Import Montserrat font (weights 400 & 700) from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styling */
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            padding: 20px;
+        }
+        /* Heading Styling */
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+            color: #00ffe0;
+        }
+        /* Navbar */
+        .navbar {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            display: flex;
+            gap: 20px;
+            background-color: transparent;
+            font-weight: bold;
+        }
+        /* Navbar Links */
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        /* Navbar Link Hover Effect */
+        .navbar a:hover {
+            color: #00ffe0;
+        }
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 80px 20px;
+            gap: 60px;
+            text-align: left;
+        }
+        /* Hero Text Styling */
+        .hero-text {
+            max-width: 500px;
+        }
+        /* Hero Heading Styling */
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        /* Hero Text Span Styling */
+        .hero h1 span {
+            color: #00ffe0;
+        }
+        /* Hero Paragraph Styling */
+        .hero p {
+            color: #ccc;
+            font-size: 14px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            text-align: justify; /* Justify alignment */
+        }
+        /* Timeline Styling */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 50px auto;
+        }
+        /* Timeline Line */
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: #00ffe0;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        /* Timeline Items */
+        .timeline-item {
+            padding: 20px;
+            position: relative;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            width: 45%;
+            margin: 20px 0;
+            color: #fff;
+        }
+        /* Dot for left side items */
+        .timeline-item.left::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: #00ffe0;
+            border: 3px solid #1a1a1a;
+            top: 30px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        /* Dot for right side items */
+        .timeline-item.right::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            left: -10px;
+            background-color: #00ffe0;
+            border: 3px solid #1a1a1a;
+            top: 30px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        /* Left and Right Positioning */
+        .left {
+            left: 0;
+        }
+        /* Right Positioning */
+        .right {
+            left: 50%;
+        }
+        /* Timeline Item Heading */
+        .timeline-item h3 {
+            color: #00ffe0;
+            margin-top: 0;
+        }
+        /* Timeline Item Paragraph */
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 50%;
+            }
+            /* Adjust timeline items for smaller screens */
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                margin-left: 0;
+                text-align: center;
+            }
+            /* Adjust dots for smaller screens */
+            .timeline-item.left::after,
+            .timeline-item.right::after {
+                left: 50%;
+                margin-left: -10px;
+                right: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="edu.html">Education</a>
+        <a href="exp.html">Experience</a>
+        <a href="skills.html">Skills</a>
+        <a href="certification.html">Certification</a>
+        <a href="volunteer.html">Volunteer</a>
+    </div>
+    <h1>Experience Timeline</h1>
+    <div class="timeline">
+        <div class="timeline-item left">
+            <h3>Data Intern – Ontop</h3>
+            <p>Mar 2025 – Present | Remote</p>
+            <p>SQL query optimization, data extraction, cleaning, and Tableau dashboard development. Supported cross-functional teams and ensured data quality through documentation.</p>
+        </div>
+        <div class="timeline-item right">
+            <h3>Administrative Office Manager – ContabWeb</h3>
+            <p>Sep 2019 – Aug 2023 | Brasília, Brazil</p>
+            <p>Managed financial and HR operations, supported the CEO directly, implemented cost-saving measures, and achieved significant improvements in financial accuracy and internal controls.</p>
+        </div>
+        <div class="timeline-item left">
+            <h3>Financial Analyst – ContabWeb</h3>
+            <p>Jul 2019 – Aug 2023 | Brasília, Brazil</p>
+            <p>Collaborated with CFO and CEO, improved financial operations, reduced errors by 15%, and increased reporting accuracy through advanced control spreadsheets.</p>
+        </div>
+        <div class="timeline-item right">
+            <h3>Legal Specialist – ContabWeb</h3>
+            <p>Feb 2019 – Aug 2023 | Brasília, Brazil</p>
+            <p>Drafted contracts, ensured legal compliance, improved contract approval rates by 75%, and worked closely with accounting and tax teams.</p>
+        </div>
+        <div class="timeline-item left">
+            <h3>Legal Intern – PGFN</h3>
+            <p>Feb 2017 – Oct 2018 | Brasília, Brazil</p>
+            <p>Contributed to the recovery of public resources and improved report accuracy by streamlining preparation processes.</p>
+        </div>
+        <div class="timeline-item right">
+            <h3>Legal Intern – Federal Police</h3>
+            <p>Feb 2016 – Dec 2016 | Brasília, Brazil</p>
+            <p>Prepared legal drafts and legislative projects, collaborated with teams to prosecute high-profile cases successfully.</p>
+        </div>
+        <div class="timeline-item left">
+            <h3>Legal Intern – Central Bank of Brazil</h3>
+            <p>Oct 2015 – Feb 2016 | Brasília, Brazil</p>
+            <p>Analyzed and tracked over 50 legal suits, prepared defense documentation, and ensured favorable outcomes.</p>
+        </div>
+    </div>
+</body>
+</html>

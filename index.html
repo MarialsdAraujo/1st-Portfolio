@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+<!-- Sets the viewport to make the website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maria Luiza de Araujo</title>
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        /* Navbar */
+        .navbar {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            display: flex;
+            gap: 20px;
+            font-weight: bold;
+        }
+        /* Navbar Links */
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        /* Navbar Link Hover Effect */
+        .navbar a:hover {
+            color: #00ffe0;
+        }
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 80px 20px;
+            gap: 60px;
+            text-align: left;
+        }
+        /* Hero Text Styling */
+        .hero-text {
+            max-width: 500px;
+        }
+        /* Hero Heading Styling */
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        /* Hero Text Span Styling */
+        .hero h1 span {
+            color: #00ffe0;
+        }
+        /* Hero Paragraph Styling */
+        .hero p {
+            color: #ccc;
+            font-size: 14px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        /* Social Icons */
+        .social-icons {
+            margin: 20px 0;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        /* Social Icons Link Styling */
+        .social-icons a {
+            color: #00ffe0;
+            font-size: 30px;
+            text-decoration: none;
+            transition: transform 0.3s, color 0.3s;
+        }
+        /* Social Icons Hover Effect */
+        .social-icons a:hover {
+            transform: scale(1.1);
+            color: #00ccbb;
+        }
+        /* CTA Button (Call to Action Button) */
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #00ffe0;
+            color: #000;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        /* CTA Button Hover Effect */
+        .cta-button:hover {
+            background-color: #00ccbb;
+        }
+        /* Profile Image */
+        .hero-img img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            box-shadow: 0 0 50px #00ffe0;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- 🔹 Navbar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="edu.html">Education</a>
+        <a href="exp.html">Experience</a>
+        <a href="skills.html">Skills</a>
+        <a href="certification.html">Certification</a>
+        <a href="volunteer.html">Volunteer</a>
+    </div>
+    <!-- 🔹 Hero Section with Image on Right -->
+    <div class="hero">
+        <!-- Text Content -->
+        <div class="hero-text">
+            <h1>Hi, I'm <span>Maria Luiza</span></h1>
+            <p>Data Analytics | AI/ML Enthusiast | Financial Analytics Expert</p>
+            <p>💡 Turning Numbers, Laws, and Data into Business Wins</p>
+            <p>I am not only interested in finance, legal analysis or data but more in how to connect them together to allow a business to really deliver success. My path is different, as I have been a Financial Analyst, an Administrative Officer Manager, and a Legal Administrative Specialist. Eventually, I learned, I was an expert in financial planning, legal compliance, and improved efficiency of operations. I now understand how important these three elements of a business are when combined.
+                As of today, I incorporate governance, sustainability, and strategic thinking in each project I am part of. While I may offer opinions in LinkedIn space or enhance actual business operations, I am pursuing a single truth: meaningful results.</p>
+            <p>🚀 Let’s connect and create something impactful together!</p>
+    <!-- Social Icons Section -->
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/maria-luiza-de-araujo/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="documents/resume.pdf" target="_blank">
+                <i class="fas fa-file-download"></i>
+            </a>
+        </div>
+            <!-- Contact Button -->
+            <a href="mailto:mluizzasoares@gmail.com" class="cta-button">
+                <i class="fas fa-envelope"></i> Contact Me
+            </a>
+        </div>
+
+        <!-- Profile Image on the Right -->
+        <div class="hero-img">
+            <img src="images/maria.jpg" alt="Maria's Photo">
+        </div>
+    </div>
+</body>
+</html>
